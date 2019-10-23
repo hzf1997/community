@@ -2,3 +2,15 @@ spring:
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql:///community?serverTimezone=UTC&useSSL=false
+github:
+  clientid: e2b1023513a7875233ef
+  clientsecret: 5423af955975e421d544f8704a2b4abce9146492
+  redirecturi: http://localhost:8080/callback
+mybatis:
+  mapper-locations: classpath:/mapping/*.xml
+  type-aliases-package: com.hzf.community.entity

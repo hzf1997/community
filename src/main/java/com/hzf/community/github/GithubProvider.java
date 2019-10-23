@@ -21,7 +21,7 @@ public class GithubProvider {
         try {
             Response response = client.newCall(request).execute();
             String string= response.body().string();
-            System.out.println(string);
+            //System.out.println(string);
             return string;
         } catch (IOException e) {
             e.printStackTrace();
@@ -39,7 +39,7 @@ public class GithubProvider {
             Response response = client.newCall(request).execute();
             String string =response.body().string();
             GithubUser githubUser = JSON.parseObject(string, GithubUser.class);
-            System.out.println(githubUser);
+            //System.out.println(githubUser);
             return githubUser;
         } catch (IOException e) {
             e.printStackTrace();

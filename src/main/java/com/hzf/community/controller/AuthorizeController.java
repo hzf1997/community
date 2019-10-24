@@ -47,7 +47,8 @@ public class AuthorizeController{
         user.setToken(UUID.randomUUID().toString());
         user.setGmtCreate(System.currentTimeMillis());
         user.setGmtModified(user.getGmtCreate());
-       // System.out.println(user);
+        user.setAvatarUrl(githubUser.getAvatar_url());
+        System.out.println(user);
         userDao.insert(user);
         response.addCookie(new Cookie("token",user.getToken()));
         //session.setAttribute("user",user);

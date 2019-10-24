@@ -9,4 +9,5 @@ import org.springframework.stereotype.Repository;
 public interface UserDao {
     void insert(User user);
     User findByToken(String token);
+    User findById(Integer id);
 }

@@ -7,6 +7,9 @@
         select * from user where token=#{token}
     </select>
     <insert id="insert" parameterType="User">
-        INSERT into user (accountId,name,token,gmtCreate,gmtModified) VALUES (#{accountId},#{name},#{token},#{gmtCreate},#{gmtModified})
+        INSERT into user (accountId,name,token,gmtCreate,gmtModified,avatar_url) VALUES (#{accountId},#{name},#{token},#{gmtCreate},#{gmtModified},#{avatarUrl})
     </insert>
+    <select id="findById" parameterType="Integer" resultType="User">
+        select * from user where id=#{id}
+    </select>
 </mapper>
